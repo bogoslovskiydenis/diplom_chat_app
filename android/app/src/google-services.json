@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "610899529993",
+    "project_id": "diplomchat-b8df2",
+    "storage_bucket": "diplomchat-b8df2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610899529993:android:8c179b956d663eed1f03d8",
+        "android_client_info": {
+          "package_name": "com.example.diplom_chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "610899529993-9g94j12cqqs46dabmqk9gcbnrj2mr8ce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDleJ6GI2Fo9OGVdKuWt4A0UzXrVypnDxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "610899529993-9g94j12cqqs46dabmqk9gcbnrj2mr8ce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
