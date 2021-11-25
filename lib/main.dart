@@ -1,3 +1,4 @@
+import 'package:diplom_chat_app/screens/widget/Authenticate.dart';
 import 'package:diplom_chat_app/screens/login_sreen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ Future main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,home: LoginScreen());
+    return MaterialApp(debugShowCheckedModeBanner: false,home: Authenticate());
   }
 }
 
