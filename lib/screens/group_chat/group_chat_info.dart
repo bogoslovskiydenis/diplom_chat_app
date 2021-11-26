@@ -52,13 +52,9 @@ class GroupInfo extends StatelessWidget {
                   ],
                 ),
               ),
-
-              //
-
               SizedBox(
                 height: size.height / 20,
               ),
-
               Container(
                 width: size.width / 1.1,
                 child: Text(
@@ -69,13 +65,10 @@ class GroupInfo extends StatelessWidget {
                   ),
                 ),
               ),
-
               SizedBox(
                 height: size.height / 20,
               ),
-
               // Members Name
-
               Flexible(
                 child: ListView.builder(
                   itemCount: 10,
@@ -95,7 +88,6 @@ class GroupInfo extends StatelessWidget {
                   },
                 ),
               ),
-
               ListTile(
                 onTap: () {},
                 leading: Icon(
