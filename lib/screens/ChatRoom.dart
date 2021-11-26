@@ -32,13 +32,28 @@ class ChatRoom extends StatelessWidget {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text(userMap['name']),
+        title: StreamBuilder<DocumentSnapshot>(
+          stream: _firestore.collection("users").doc(userMap['uid']).snapshots(),
+          builder: (context, snapshot) {
+            if (snapshot.data != null) {
+              return Container(
+                child: Column(
+                  children: [
+                    Text(userMap['name']),
+                    Text(snapshot.data!['status'],style: TextStyle(fontSize: 14),),
+                  ],
+                ),
+              );
+            } else {
+              return Container();
+            }
+          },
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -50,7 +65,9 @@ class ChatRoom extends StatelessWidget {
                   stream: _firestore
                       .collection('chatroom')
                       .doc(chatRoomId)
-                      .collection('chats').orderBy('time', descending: false).snapshots(),
+                      .collection('chats')
+                      .orderBy('time', descending: false)
+                      .snapshots(),
                   builder: (BuildContext context,
                       AsyncSnapshot<QuerySnapshot> snapshot) {
                     if (snapshot.data != null) {
